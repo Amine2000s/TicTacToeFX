@@ -225,6 +225,7 @@ public class OnevOneController {
         AnchorPane p1  = loader.load();
         StackPane mainpane = new StackPane();
         mainpane.getChildren().add(new ImageView("C:\\Users\\amin\\IdeaProjects\\demo\\src\\MediaResources\\Wallpaper.jpg"));
+
         mainpane.getChildren().add(p1);
         Scene scene = new Scene(mainpane,500,300);
 
@@ -241,7 +242,7 @@ public class OnevOneController {
         stage.initModality(Modality.APPLICATION_MODAL);
 
         //stage.initOwner(stage);
-
+        stage.setResizable(false );
         stage.showAndWait();
 
         /*if(controller.isPlayAgainClicked())
