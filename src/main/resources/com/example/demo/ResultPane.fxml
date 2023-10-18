@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ResultPaneController">
+   <children>
+      <ImageView fitHeight="348.0" fitWidth="518.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../MediaResources/Wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="ResultPane" layoutX="127.0" layoutY="28.0" prefHeight="130.0" prefWidth="256.0">
+         <children>
+            <Label fx:id="WinnerLabel" alignment="CENTER" prefHeight="130.0" prefWidth="256.0" style="-fx-background-color: white; -fx-border-style: solid;" text="PLAYER WON" textOverrun="CENTER_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="Perpetua Titling MT Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <StackPane layoutX="125.0" layoutY="174.0" prefHeight="150.0" prefWidth="256.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="CancelButton" alignment="CENTER" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="50.0" layoutX="76.0" layoutY="91.0" lineSpacing="50.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="45.0" prefWidth="102.0" scaleShape="false" text="Cancel" />
+                  <Button fx:id="PlayAgainButton" layoutX="75.0" layoutY="30.0" mnemonicParsing="false" onAction="#playAgainAction" prefHeight="45.0" prefWidth="102.0" text="Play Again " />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
