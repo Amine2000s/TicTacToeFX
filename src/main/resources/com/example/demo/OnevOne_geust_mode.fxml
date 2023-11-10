@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.OnevOneController">
+   <children>
+      <ImageView fitHeight="658.0" fitWidth="638.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../MediaResources/Wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <FlowPane prefHeight="200.0" prefWidth="200.0" />
+      <Pane fx:id="MainPane" layoutX="128.0" layoutY="184.0" prefHeight="466.0" prefWidth="381.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-image-insets: 20; -fx-border-style: solid; -fx-border-width: 15;">
+         <children>
+            <Line endX="174.00003051757812" endY="1.52587890625E-5" layoutX="188.0" layoutY="158.0" startX="-173.99996948242188" startY="1.52587890625E-5" strokeWidth="10.0" />
+            <Line endX="173.60000610351562" layoutX="191.0" layoutY="310.0" startX="-177.60000610351562" strokeWidth="10.0" />
+            <Line endX="100.00003051757812" endY="8.599996566772461" layoutX="31.0" layoutY="-2.0" startX="100.00003051757812" startY="449.79998779296875" strokeWidth="10.0" />
+            <Line endX="100.00003051757812" endY="-30.200000762939453" layoutX="155.0" layoutY="49.0" startX="100.00003051757812" startY="404.8000183105469" strokeWidth="10.0" />
+            <Button fx:id="One" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="138.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="Two" layoutX="136.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="138.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="Three" layoutX="257.0" layoutY="16.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="138.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="four" layoutX="16.0" layoutY="163.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="141.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="seven" layoutX="16.0" layoutY="313.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="138.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="eight" layoutX="136.0" layoutY="315.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="138.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="nine" layoutX="257.0" layoutY="313.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="138.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="five" layoutX="136.0" layoutY="162.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="142.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="six" layoutX="260.0" layoutY="163.0" mnemonicParsing="false" onAction="#OnClickedButton" prefHeight="141.0" prefWidth="113.0" text=" ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="179.0" layoutY="35.0" prefHeight="106.0" prefWidth="278.0" style="-fx-background-color: white; -fx-border-style: solid;" text="Have Fun ! " underline="true">
+         <font>
+            <Font name="Perpetua Titling MT Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
