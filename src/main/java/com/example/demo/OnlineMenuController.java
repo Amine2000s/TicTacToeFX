@@ -1,16 +1,22 @@
 package com.example.demo;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Objects;
 
 public class OnlineMenuController {
@@ -21,6 +27,21 @@ public class OnlineMenuController {
     Scene scene;
 
     Parent root ;
+
+    @FXML
+    Button HostButton ;
+    @FXML
+    Button GeustButton ;
+
+    ServerSocket serverSocket ;
+
+    Socket socket ;
+    DataInputStream in ;
+
+    DataOutputStream out ;
+
+    FXMLLoader waiting_loader;
+
 
     public void OnReturnButoon(ActionEvent event) throws IOException {
 
@@ -46,4 +67,44 @@ public class OnlineMenuController {
         stage.show();
 
     }
+
+    public void onHostButton() throws IOException {
+
+        FXMLLoader waiting_loader = new FXMLLoader(getClass().getResource("waiting_for_geust_to_connect.fxml"));
+
+        Parent parent = waiting_loader.load();
+
+        Scene scene2 = new Scene(parent);
+
+        Stage miniStage = new Stage();
+        miniStage.setResizable(false);
+
+        miniStage.setScene(scene2);
+
+        miniStage.show();
+
+        new Thread(()->{
+
+            try {
+                serverSocket = new ServerSocket(8000);
+                socket =serverSocket.accept();
+                out = new DataOutputStream(socket.getOutputStream());
+                in = new DataInputStream(socket.getInputStream());
+
+                if(socket.isConnected()){
+                    miniStage.close();
+
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+
+
+        });
+
+    }
+
+
+
 }

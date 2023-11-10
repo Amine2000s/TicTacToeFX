@@ -87,7 +87,6 @@ public class PlayMenuController {
         Background.setFitHeight(500);
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("OnlineMenu.fxml")));
 
-
         StackPane PLPane = new StackPane();
 
         PLPane.getChildren().add(Background);

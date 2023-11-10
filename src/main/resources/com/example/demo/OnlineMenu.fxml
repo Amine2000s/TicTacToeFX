@@ -20,8 +20,8 @@
                 </ImageView>
                 <Pane prefHeight="563.0" prefWidth="600.0">
                     <children>
-                        <Button alignment="CENTER" layoutX="212.0" layoutY="323.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="171.0" style="-fx-border-color: black; -fx-border-style: solid;" text="Host" />
-                        <Button layoutX="213.0" layoutY="394.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="171.0" style="-fx-border-color: black; -fx-border-style: solid;" styleClass="Button" text="Geust" />
+                        <Button fx:id="HostButton" alignment="CENTER" layoutX="212.0" layoutY="323.0" mnemonicParsing="false" onAction="#onHostButton" prefHeight="45.0" prefWidth="171.0" style="-fx-border-color: black; -fx-border-style: solid;" text="Host" />
+                        <Button fx:id="GeustButton" layoutX="213.0" layoutY="394.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="171.0" style="-fx-border-color: black; -fx-border-style: solid;" styleClass="Button" text="Geust" />
                         <Label alignment="CENTER" layoutX="172.0" layoutY="142.0" prefHeight="123.0" prefWidth="256.0" style="-fx-background-color: white; -fx-border-style: solid;" text="Choose game mode ! " textOverrun="CENTER_ELLIPSIS" underline="true">
                             <font>
                                 <Font name="Perpetua Titling MT Bold" size="19.0" />
